@@ -1,0 +1,8 @@
+During investigation i found the following regarding the PRICE FILTERS:
+	Lowest price filter applies in API call and UI
+	Highest price filter applies only in UI
+	
+	Each time the LOWEST price is INCREASED or DECREASED a new API call is made with the respective price as filter
+	Each time the HIGHEST price is DECREASED (without changing the lowest price) the same API call is made with only the LOWEST price as filter
+	Each time the HIGHEST price is INCREASED (without changing the lowest price) NO new API call is made
+		-> Not sure if this is a bug on intended behaviour

@@ -1,0 +1,62 @@
+TEST SUMMARY:
+
+SCENARIOS OF - Flight_network_filter_UI_test.feature
+
+Scenario Outline: The Results page filters are displayed correctly
+	-> Checks the filters on display after a flight search
+	-> Checks if the different filters regarding TRIP TYPES are on display (Return - One-way - Multi-city)
+
+Scenario Outline: The 'Number of stops' filter works correctly for <stops> stops
+	-> Checks the STOPS filter application depending on user input (0 - 1 - All)
+
+Scenario Outline: The 'Price' filter works correctly for <price> prices
+	-> Checks the PRICE filter application depending on user input (increased lowest price - decreased highest price)
+
+Scenario Outline: The 'Airlines' filter works correctly for <airlines> airlines
+	-> Checks the AIRLINES filter application depending on user input (1 chosen airline - 2 chosen airlines)
+
+Scenario Outline: The 'Airlines' and 'Number of stops' filters work correctly for <airlines> and <stops> requests
+	-> Combo checks the following
+	-> The STOPS filter application depending on user input (1 stop)
+	-> The AIRLINES filter application depending on user input (1 chosen airline)
+
+Scenario Outline: The Results page filters are reset correctly
+	-> Applies some filters
+	-> Resets all filters
+	-> Checks if the filters where reset correctly
+	
+Scenario: The 'Trip Departure/Arrival' filter works correctly
+	-> No implementation
+	-> Similar steps and check with Scenario Outline: The 'Price' filter works correctly for <price> prices
+	
+Scenario: The 'Travel time' filter works correctly
+	-> No implementation
+	-> Similar steps and check with Scenario Outline: The 'Price' filter works correctly for <price> prices
+	
+	
+	
+	
+SCENARIOS OF - Flight network filter manual test.feature
+
+Scenario Outline: The Results page filters are displayed correctly
+	-> Sample manual test to include in the serenity report generation
+
+
+
+
+IMPROVEMENTS + NEW IMPLEMENTATION:
+
+For now all tests regard the UI filtering and the data displayed after those filters apply.
+
+Cross check the filters that are applied through the UI with the API call made as well the response received.
+1) Check the api request body for existing filters
+2) Parse the api response to assert that the results are correct
+
+Implement an API testing suite that:
+1) Creates a request with desired filters
+2) Makes an api call with the created request
+3) Parse api response to assert that the results are correct
+
+*Access to the related SWAGGER page is needed for API test suite development
+
+
