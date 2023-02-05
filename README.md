@@ -25,10 +25,10 @@ mvn clean verify
 target/site/serenity -> index.html
 ````
 
-#Info
+# Info
 This suite includes several automated tests as well as some dummy manual tests that were conducted via the UI
 
-#Possible Improvements
+# Possible Improvements
 **For now** all tests regard the UI filtering and the data displayed after those filters apply.
 ````
 Cross check the filters that are applied through the UI with the API call made as well the response received.
